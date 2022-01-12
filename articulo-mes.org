@@ -1,0 +1,59 @@
+* Inclusion criteria
+1. Published during the past 12 months or so
+2. First author is student or postdoc affiliated with the IRyA
+* Candidate articles
+** 2022 January
+*** Mengyao Tang                                  :phd:gone:
+W51 North: A protocluster emerging out of a thermally inhibited fragmenting cloud 
+Tang, Mengyao; Palau, Aina; Zapata, Luis A.; Qin, Sheng-Li 
+2022/01, Astronomy and Astrophysics, 657, A30
+*** Mauricio                                      :postdoc:gone:
+Planetary nebulae with Wolf-Rayet-type central stars - III. A detailed view of NGC 6905 and its central star 
+Gómez-González, V. M. A.; Rubio, G.; Toalá, J. A.; Guerrero, M. A.; Sabin, L.; Todt, H.; Gómez-Llanos, V.; Ramos-Larios, G.; Mayya, Y. D. 
+2022/01, Monthly Notices of the Royal Astronomical Society, 509, 974
+** 2021 December
+*** Jacqueline                                    :postdoc:
+Planetary nebulae with Wolf-Rayet-type central stars - II. Dissecting the compact planetary nebula M 2-31 with GTC MEGARA 
+Rechy-García, J. S.; Toalá, J. A.; Cazzoli, S.; Guerrero, M. A.; Sabin, L.; Gómez-González, V. M. A.; Ramos-Larios, G. 
+2021/12, Monthly Notices of the Royal Astronomical Society, 508, 2254
+** 2021 November
+*** Genaro                                        :ensenada:
+A Core Mass Function Indistinguishable from the Salpeter Stellar Initial Mass Function Using 1000 au Resolution ALMA Observations 
+Suárez, Genaro; Galván-Madrid, Roberto; Aguilar, Luis; Ginsburg, Adam; Srinivasan, Sundar; Liu, Hauyu Baobab; Román-Zúñiga, Carlos G. 
+2021/11, The Astrophysical Journal, 921, 48
+** 2021 October
+*** Palmira                                       :phd:
+Dust in RCW 58: Clues to common envelope channel formation? 
+Jiménez-Hernández, P.; Arthur, S. J.; Toalá, J. A.; Marston, A. P. 
+2021/10, Monthly Notices of the Royal Astronomical Society, 507, 3030
+** 2021 August
+*** Jairo                                         :phd:gone:
+Star cluster survival in dark matter haloes: an old cluster in Eridanus II? 
+Alzate, Jairo A.; Lora, Verónica; Bruzual, Gustavo; Lomelí-Núñez, Luis; Cervantes Sodi, Bernardo 
+2021/08, Monthly Notices of the Royal Astronomical Society, 505, 2074
+*3 citations*
+** 2021 July
+*** Donaji                                        :phd:gone:
+The dust-gas AGN torus as constrained from X-ray and mid-infrared observations 
+Esparza-Arredondo, D.; Gonzalez-Martín, O.; Dultzin, D.; Masegosa, J.; Ramos-Almeida, C.; García-Bernete, I.; Fritz, J.; Osorio-Clavijo, N. 
+2021/07, Astronomy and Astrophysics, 651, A91
+** 2021 March
+*** Janis                                         :phd:
+Detailed studies of IPHAS sources - III. The highly extinguished bipolar planetary nebula IPHASX J191104.8+060845 
+Rodríguez-González, J. B.; Sabin, L.; Toalá, J. A.; Zavala, S.; Ramos-Larios, G.; Guerrero, M. A.; Parker, Q. A.; Guillén, P. F.; Ritter, A. 
+2021/03, Monthly Notices of the Royal Astronomical Society, 501, 3605
+** 2021 January
+*** Thomas                                        :postdoc:
+[[https://ui.adsabs.harvard.edu/abs/2021A&A...645A..94N][Mass segregation and sequential star formation in NGC 2264 revealed by Herschel]]
+Nony, T.; Robitaille, J. -F.; Motte, F.; Gonzalez, M.; Joncour, I.; Moraux, E.; Men'shchikov, A.; Didelon, P.; Louvet, F.; Buckner, A. S. M.; Schneider, N.; Lumsden, S. L.; Bontemps, S.; Pouteau, Y.; Cunningham, N.; Fiorellino, E.; Oudmaijer, R.; André, P.; Thomasson, B. 
+2021/01, Astronomy and Astrophysics, 645, A94
+*8 citations*
+*** Jairo again                                   :phd:
+[[https://ui.adsabs.harvard.edu/abs/2021MNRAS.501..302A][Star formation history of the solar neighbourhood as told by Gaia]] 
+Alzate, Jairo A.; Bruzual, Gustavo; Díaz-González, Daniel J. 
+2021/01, Monthly Notices of the Royal Astronomical Society, 501, 302
+*7 citations*
+*** Mauricio again                                :postdoc:gone:
+[[https://ui.adsabs.harvard.edu/abs/2021MNRAS.500.2076G][Wolf-Rayet stars in the Antennae unveiled by MUSE]]
+Gómez-González, V. M. A.; Mayya, Y. D.; Toalá, J. A.; Arthur, S. J.; Zaragoza-Cardiel, J.; Guerrero, M. A. 
+2021/01, Monthly Notices of the Royal Astronomical Society, 500, 2076
