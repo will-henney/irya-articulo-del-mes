@@ -43,12 +43,12 @@ Detailed studies of IPHAS sources - III. The highly extinguished bipolar planeta
 Rodríguez-González, J. B.; Sabin, L.; Toalá, J. A.; Zavala, S.; Ramos-Larios, G.; Guerrero, M. A.; Parker, Q. A.; Guillén, P. F.; Ritter, A. 
 2021/03, Monthly Notices of the Royal Astronomical Society, 501, 3605
 ** 2021 January
-*** Thomas                                        :postdoc:
+*** [#A] Thomas                                   :postdoc:
 [[https://ui.adsabs.harvard.edu/abs/2021A&A...645A..94N][Mass segregation and sequential star formation in NGC 2264 revealed by Herschel]]
 Nony, T.; Robitaille, J. -F.; Motte, F.; Gonzalez, M.; Joncour, I.; Moraux, E.; Men'shchikov, A.; Didelon, P.; Louvet, F.; Buckner, A. S. M.; Schneider, N.; Lumsden, S. L.; Bontemps, S.; Pouteau, Y.; Cunningham, N.; Fiorellino, E.; Oudmaijer, R.; André, P.; Thomasson, B. 
 2021/01, Astronomy and Astrophysics, 645, A94
 *8 citations*
-*** Jairo again                                   :phd:
+*** [#A] Jairo again                              :phd:
 [[https://ui.adsabs.harvard.edu/abs/2021MNRAS.501..302A][Star formation history of the solar neighbourhood as told by Gaia]] 
 Alzate, Jairo A.; Bruzual, Gustavo; Díaz-González, Daniel J. 
 2021/01, Monthly Notices of the Royal Astronomical Society, 501, 302
@@ -57,3 +57,102 @@ Alzate, Jairo A.; Bruzual, Gustavo; Díaz-González, Daniel J.
 [[https://ui.adsabs.harvard.edu/abs/2021MNRAS.500.2076G][Wolf-Rayet stars in the Antennae unveiled by MUSE]]
 Gómez-González, V. M. A.; Mayya, Y. D.; Toalá, J. A.; Arthur, S. J.; Zaragoza-Cardiel, J.; Guerrero, M. A. 
 2021/01, Monthly Notices of the Royal Astronomical Society, 500, 2076
+* Month by month
+** TODO Pilot study [2022-01-23 Sun]
++ Alzate et al. 2021/01
++ [[https://ui.adsabs.harvard.edu/abs/2021MNRAS.501..302A][Star formation history of the solar neighbourhood as told by Gaia]]
+** Summary of results
+They identify 3 episodes of star formation in the solar neighborhood:
+1. Intense period 10 Gyr ago, with subsolar metallicity (Z = 0.014), followed by decline to minimum 8 Gyr ago
+2. Local maximum 5 Gyr ago at solar metallicity (Z = 0.017)
+3. Low-level continuing until recently at higher metallicity (Z = 0.03)
+*** Relevant quote
+From section 4.1
+: The AMD in Fig. 6c shows clearly the presence of three well de fined
+: events. A maximum in the star formation activity took place ~ 10 Gyr
+: ago, forming stars of metallicity slightly below solar (Z =0.014). The
+: SFR then decreased, reaching a minimum at ~ 8 Gyr ago. Snaith et
+: al. (2015) and Haywood et al. (2016) found evidence of this quenching
+: of star forming activity comparing ob served chemical abundances of
+: stars in the solar neighbourhood with the predictions of chemical
+: evolution models. After this minimum, star formation increases again,
+: reaching a local maximum close a to 5 Gyr ago at solar metallicity (Z
+: = 0.017), and then quenches. A small amount of residual star formation
+: remains until recent epochs. The stellar metallicity increases in time
+: from Z = 0.01 to 0.03. Although our sample is very limited compared to
+: all the stars brighter than G = 12 in Gaia DR2, our results are in
+: agreement with the star for mation history derived by Mor et
+: al. (2019) for the larger sample a using a single metallicity model.
+** Figs
++ Best figure in the paper is probably 6d
++ But it could be improved on using the data from Table 4
++ The 3D plot would be better as 2D with 3 different lines for different metallicities
+  + Combine the two subsolar Z into one
+  + Maybe do a KDE for smoothing
+  + Show the uncertainty with a translucent band
+  + Add another line for the total
+** Methodology
++ They used Gaia sample of stars brighter than G = 15, and within 100 pc
++ They fit ensembles of theoretical isochrones to the color-magnitude diagram in order to infer the star formation history
++ Results are fraction of stars that have each age and metallicity
+  + 11 discrete ages and 4 metallicities in their high-res model
++ They don't explicitly find a SFR, although we could use the normalization from other papers
+** Context
++ Possibly the SF peaks are due to perturbations by the Sagittarius dwarf galaxy
+  + This is consistent with simulations by Vasiliev et al 2021, which give a longer time scale than previous studies
+  + Also has excited a "phase spiral" in the solar neighborhood
+    + Antoja et al. 2018
+    + Bland-Hawthorn & García 2021
+  + The mass of Sag dwarf is currently low, but it has been losing mass on every passage, and supposedly it used to be more massive.
+** New figure
+*** Grid C
+| Age(Gyr) | Z=0.010 |         | Z=0.014 |         | Z=0.017 |         | Z=0.030 |         |   Total |
+|----------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+|      0.1 |  0.0050 | +0.0113 |  0.0052 | +0.0125 |  0.0072 | +0.0166 |  0.2053 | +0.1871 |  0.2227 |
+|          |         | -0.0043 |         | -0.0044 |         | -0.0061 |         | -0.1527 |         |
+|      0.2 |  0.0058 | +0.0138 |  0.0062 | +0.0145 |  0.0087 | +0.0203 |  0.3171 | +0.3411 |  0.3378 |
+|          |         | -0.0049 |         | +0.0184 |         | -0.0074 |         | -0.2495 |         |
+|      0.5 |  0.0075 | +0.0168 |  0.0080 | -0.0068 |  0.0135 | +0.0303 |  4.5449 | +0.3681 |  4.5739 |
+|          |         | -0.0063 |         | +0.0793 |         | -0.0114 |         | -0.3870 |         |
+|      1.0 |  0.1056 | +0.0883 |  0.0357 | -0.0302 |  0.0441 | +0.0969 |  5.2737 | +0.4634 |  5.4591 |
+|          |         | -0.0622 |         | +0.1052 |         | -0.0372 |         | -0.4669 |         |
+|      1.7 |  0.0479 | +0.1026 |  0.0480 | -0.0052 |  0.5494 | +0.5255 |  5.6663 | +0.6092 |  6.3116 |
+|          |         | -0.0406 |         | -0.0405 |         | -0.4011 |         | -0.5996 |         |
+|      2.5 |  0.0805 | +0.1734 |  0.1503 | +0.3402 |  5.0367 | +0.8053 |  2.0529 | +0.6133 |  7.3204 |
+|          |         | -0.0679 |         | -0.1272 |         | -0.8244 |         | -0.5869 |         |
+|      4.0 |  0.0870 | +0.1923 |  0.7358 | +1.1397 |  3.8083 | +1.3415 |  0.0212 | +0.0490 |  4.6523 |
+|          |         | -0.0734 |         | -0.6042 |         | -1.4189 |         | -0.0181 |         |
+|      4.8 |  0.1309 | +0.2886 |  0.0832 | +0.1931 | 19.7555 | +1.7711 |  0.0154 | +0.0355 | 19.9850 |
+|          |         | -0.1105 |         | -0.0703 |         | -1.7915 |         | -0.0130 |         |
+|      6.5 |  0.2582 |  +0.540 |  0.1497 | +0.3461 | 13.8344 |  2.0057 |  0.0131 | +0.0308 | 14.2554 |
+|          |         | -0.2178 |         | -0.1272 |         | -1.9959 |         | -0.0111 |         |
+|      8.0 |  0.3737 | +0.7690 |  2.5154 | +2.2383 |  5.4309 | +2.1144 |  0.0108 | +0.0254 |  8.3308 |
+|          |         | -0.3151 |         | -1.7888 |         | -2.2342 |         | -0.0092 |         |
+|     10.0 |  6.1622 | +0.6903 | 19.6321 | +1.8906 |  1.7232 | +2.1215 |  0.0082 | +0.0187 | 27.5257 |
+|          |         | -0.9599 |         | -2.1886 |         | -1.3614 |         | -0.0070 |         |
+*** Text of article
+
+What caused our Sun to be born?  A recent paper by researchers from the IRyA suggests that the answer may lie in a small galaxy that is slowly being devoured by our larger Milky Way Galaxy.
+The smaller galaxy (known as the Sagittarius dwarf) is on an elongated orbit around the Milky Way, making a close approach every few billion years.
+Every time it does so, it shakes up the gas clouds in the Milky Way's disk, which encourages the birth of new stars.
+One such burst of star formation, which occurred about 5 billion years ago is likely to have included the birth of our Sun.
+
+Researchers led by the doctoral student Jairo Alzate obtained the brightness and colors of more than 100,000 nearby stars in the solar neighborhood from observations with the Gaia satellite, which was launched by the European Space Agency in 2013.
+In a paper published last year (Alzate et al. 2021) in the Monthly Notices of the Royal Astronomical Society, they used these measurements to reconstruct the historical record of star births in the small region of the Milky Way within about 300 light years of the Sun.
+By looking at groups of stars with different chemical compositions, they were able to identify 3 different epochs of star formation, as shown in the Figure.
+
+The fraction of heavy elements such as carbon, oxygen, and iron in the chemical make-up of a star is known as its metallicity.
+The earliest generations of stars are relatively poor in metals, since only light elements such as hydrogen and helium were created in the Big Bang at the beginning of the Universe (about 15 billion years ago).
+Each generation of stars converts some hydrogen into heavier elements and a fraction of these are expelled from the stars to mix with the Galactic gas clouds from which the next generation will be born.
+This is why the metallicity of new born stars tends to increase with time over the lifetime of a galaxy such as ours. 
+
+Alzate and colleagues found that the metal-poor stars show a peak in their birth rate about 10 billion years ago, which declines to much lower levels by 8 billion years ago.
+For stars with a similar composition to the sun, on the other hand,
+the birth rate has a peak from 4 to 6 billion years ago.
+This agrees very well with the age of our Sun, which is known to be about 4.5 billion years.
+Stars with an even higher metallicity than our Sun continue being formed until relatively recently, but at a much lower rate than in the previous bursts.
+
+This result is consistent with other independent studies that have used different methods.
+For instance researchers from Spain, France, and Italy led by Tomás Ruiz-Lara from Tenerife also found evidence for a burst around 6 billion years ago, together with more recent bursts at 2 and 1 billion years ago (Ruiz-Lara et al. 2020).
+On the other hand, another recent study by researchers from Italy, Chile, and China led by Piero Dal Tio from Padua detected a low-metallicity burst 9.5 billion years ago but found no evidence for any more recent bursts.
+Clearly, further study is needed to resolve these differences.
