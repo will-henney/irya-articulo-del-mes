@@ -1,3 +1,4 @@
+#+PANDOC_OPTIONS: self-contained:t
 * Inclusion criteria
 1. Published during the past 12 months or so
 2. First author is student or postdoc affiliated with the IRyA
@@ -61,6 +62,8 @@ Gómez-González, V. M. A.; Mayya, Y. D.; Toalá, J. A.; Arthur, S. J.; Zaragoza
 ** TODO Pilot study [2022-01-23 Sun]
 + Alzate et al. 2021/01
 + [[https://ui.adsabs.harvard.edu/abs/2021MNRAS.501..302A][Star formation history of the solar neighbourhood as told by Gaia]]
+** Export self-contained html file
+
 ** Summary of results
 They identify 3 episodes of star formation in the solar neighborhood:
 1. Intense period 10 Gyr ago, with subsolar metallicity (Z = 0.014), followed by decline to minimum 8 Gyr ago
@@ -106,45 +109,167 @@ From section 4.1
   + The mass of Sag dwarf is currently low, but it has been losing mass on every passage, and supposedly it used to be more massive.
 ** New figure
 *** Grid C
+#+name: jairo-grid-c
 | Age(Gyr) | Z=0.010 |         | Z=0.014 |         | Z=0.017 |         | Z=0.030 |         |   Total |
 |----------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
 |      0.1 |  0.0050 | +0.0113 |  0.0052 | +0.0125 |  0.0072 | +0.0166 |  0.2053 | +0.1871 |  0.2227 |
-|          |         | -0.0043 |         | -0.0044 |         | -0.0061 |         | -0.1527 |         |
+|        0 |       0 | -0.0043 |       0 | -0.0044 |       0 | -0.0061 |       0 | -0.1527 |       0 |
 |      0.2 |  0.0058 | +0.0138 |  0.0062 | +0.0145 |  0.0087 | +0.0203 |  0.3171 | +0.3411 |  0.3378 |
-|          |         | -0.0049 |         | +0.0184 |         | -0.0074 |         | -0.2495 |         |
+|        0 |       0 | -0.0049 |       0 | +0.0184 |       0 | -0.0074 |       0 | -0.2495 |       0 |
 |      0.5 |  0.0075 | +0.0168 |  0.0080 | -0.0068 |  0.0135 | +0.0303 |  4.5449 | +0.3681 |  4.5739 |
-|          |         | -0.0063 |         | +0.0793 |         | -0.0114 |         | -0.3870 |         |
+|        0 |       0 | -0.0063 |       0 | +0.0793 |       0 | -0.0114 |       0 | -0.3870 |       0 |
 |      1.0 |  0.1056 | +0.0883 |  0.0357 | -0.0302 |  0.0441 | +0.0969 |  5.2737 | +0.4634 |  5.4591 |
-|          |         | -0.0622 |         | +0.1052 |         | -0.0372 |         | -0.4669 |         |
+|        0 |       0 | -0.0622 |       0 | +0.1052 |       0 | -0.0372 |       0 | -0.4669 |       0 |
 |      1.7 |  0.0479 | +0.1026 |  0.0480 | -0.0052 |  0.5494 | +0.5255 |  5.6663 | +0.6092 |  6.3116 |
-|          |         | -0.0406 |         | -0.0405 |         | -0.4011 |         | -0.5996 |         |
+|        0 |       0 | -0.0406 |       0 | -0.0405 |       0 | -0.4011 |       0 | -0.5996 |       0 |
 |      2.5 |  0.0805 | +0.1734 |  0.1503 | +0.3402 |  5.0367 | +0.8053 |  2.0529 | +0.6133 |  7.3204 |
-|          |         | -0.0679 |         | -0.1272 |         | -0.8244 |         | -0.5869 |         |
+|        0 |       0 | -0.0679 |       0 | -0.1272 |       0 | -0.8244 |       0 | -0.5869 |       0 |
 |      4.0 |  0.0870 | +0.1923 |  0.7358 | +1.1397 |  3.8083 | +1.3415 |  0.0212 | +0.0490 |  4.6523 |
-|          |         | -0.0734 |         | -0.6042 |         | -1.4189 |         | -0.0181 |         |
+|        0 |       0 | -0.0734 |       0 | -0.6042 |       0 | -1.4189 |       0 | -0.0181 |       0 |
 |      4.8 |  0.1309 | +0.2886 |  0.0832 | +0.1931 | 19.7555 | +1.7711 |  0.0154 | +0.0355 | 19.9850 |
-|          |         | -0.1105 |         | -0.0703 |         | -1.7915 |         | -0.0130 |         |
+|        0 |       0 | -0.1105 |       0 | -0.0703 |       0 | -1.7915 |       0 | -0.0130 |       0 |
 |      6.5 |  0.2582 |  +0.540 |  0.1497 | +0.3461 | 13.8344 |  2.0057 |  0.0131 | +0.0308 | 14.2554 |
-|          |         | -0.2178 |         | -0.1272 |         | -1.9959 |         | -0.0111 |         |
+|        0 |       0 | -0.2178 |       0 | -0.1272 |       0 | -1.9959 |       0 | -0.0111 |       0 |
 |      8.0 |  0.3737 | +0.7690 |  2.5154 | +2.2383 |  5.4309 | +2.1144 |  0.0108 | +0.0254 |  8.3308 |
-|          |         | -0.3151 |         | -1.7888 |         | -2.2342 |         | -0.0092 |         |
+|        0 |       0 | -0.3151 |       0 | -1.7888 |       0 | -2.2342 |       0 | -0.0092 |       0 |
 |     10.0 |  6.1622 | +0.6903 | 19.6321 | +1.8906 |  1.7232 | +2.1215 |  0.0082 | +0.0187 | 27.5257 |
-|          |         | -0.9599 |         | -2.1886 |         | -1.3614 |         | -0.0070 |         |
-*** Text of article
+|        0 |       0 | -0.9599 |       0 | -2.1886 |       0 | -1.3614 |       0 | -0.0070 |       0 |
+|     13.0 |       0 |       0 |     1.4 |    +2.1 |       0 |       0 |       0 |       0 |     1.4 |
+|        0 |       0 |       0 |       0 |    -1.2 |       0 |       0 |       0 |       0 |       0 |
+Note that I have added in the 13 Gyr point from the grid B table
+#+begin_src python :var tab=jairo-grid-c :return figfile :results file
+  import numpy as np
+  from scipy.interpolate import interp1d
+  from matplotlib import pyplot as plt
+  import seaborn as sns
+  import cmasher as cmr
 
-What caused our Sun to be born?  A recent paper by researchers from the IRyA suggests that the answer may lie in a small galaxy that is slowly being devoured by our larger Milky Way Galaxy.
-The smaller galaxy (known as the Sagittarius dwarf) is on an elongated orbit around the Milky Way, making a close approach every few billion years.
+  sns.set_context("talk")
+
+  # get data from even rows in table
+  age, a1, da1, a2, da2, a3, da3, a4, da4, tot = np.array(tab[::2]).T
+  # downwards error bar is in odd rows
+  _, _, dda1, _, dda2, _, dda3, _, dda4, _ = np.array(tab[1::2]).astype("float").T
+
+  # estimate widths of age bins 
+  dt = np.diff(age, append=16.0)
+  zpoor = (a1 + a2) / dt
+  zsolar = a3 / dt
+  zrich = a4 / dt
+  zp1 = (a1 + da1 + a2 + da2) / dt
+  zp0 = (a1 + dda1 + a2 + dda2) / dt
+  zs1 = (a3 + da3) / dt
+  zs0 = (a3 + dda3) / dt
+  zr1 = (a4 + da4) / dt
+  zr0 = (a4 + dda4) / dt
+
+  tgrid = np.linspace(0.0, 13.0, 201)
+
+  def myinterp(x, xp, yp):
+      """Interpolation ensuring positivity"""
+      interpolator = interp1d(xp, yp, fill_value=0.0, bounds_error=False, kind="quadratic")
+      return np.abs(interpolator(x))
+
+
+  zp_grid = myinterp(tgrid, age, zpoor)
+  zs_grid = myinterp(tgrid, age, zsolar)
+  zr_grid = myinterp(tgrid, age, zrich)
+
+  zp1_grid = myinterp(tgrid, age, zp1)
+  zp0_grid = myinterp(tgrid, age, zp0)
+  zs1_grid = myinterp(tgrid, age, zs1)
+  zs0_grid = myinterp(tgrid, age, zs0)
+  zr1_grid = myinterp(tgrid, age, zr1)
+  zr0_grid = myinterp(tgrid, age, zr0)
+
+  fig, ax = plt.subplots(figsize=(8, 4))
+
+  # histogram of original values
+  # ax.plot(age, zpoor, ds="steps-mid")
+  # ax.plot(age, zsolar, ds="steps-mid")
+  # ax.plot(age, zrich, ds="steps-mid")
+
+  colors = cmr.take_cmap_colors('cmr.chroma', 3, cmap_range=(0.1, 0.5), return_fmt='hex')
+
+  # spline interpolation
+  ax.plot(tgrid, zp_grid, color=colors[0])
+  ax.fill_between(tgrid, zp0_grid, zp1_grid, color=colors[0], alpha=0.3)
+  ax.annotate(
+      "Metal-poor\nstars",
+      (tgrid[160], zp_grid[160]),
+      color=colors[0],
+      xytext=(0, 20),
+      textcoords="offset points",
+      ha="center",
+  )
+
+  ax.plot(tgrid, zs_grid, color=colors[1])
+  ax.fill_between(tgrid, zs0_grid, zs1_grid, color=colors[1], alpha=0.3)
+  ax.annotate(
+      "Sun-type\nstars",
+      (tgrid[90], zs_grid[90]),
+      color=colors[1],
+      xytext=(0, 30),
+      textcoords="offset points",
+      ha="center",
+  )
+
+  ax.plot(tgrid, zr_grid, color=colors[2])
+  ax.fill_between(tgrid, zr0_grid, zr1_grid, color=colors[2], alpha=0.3)
+  ax.annotate(
+      "Metal-rich\nstars",
+      (tgrid[30], zr_grid[30]),
+      color=colors[2],
+      xytext=(0, 50),
+      textcoords="offset points",
+      ha="center",
+  )
+
+  ax.set_xticks([0.0, 5.0, 10.0])
+  ax.set_xticklabels(["now", "5 billion\nyears ago", "10 billion\nyears ago"])
+  ax.set_yticks([])
+  ax.invert_xaxis()
+  #ax.set_xlabel("Age")
+  ax.set_ylabel(
+      "Relative\nstar-formation\nrate",
+      rotation="horizontal",
+      loc="top",
+      va="top",
+  )
+  sns.despine()
+  figfile = "jairo-sfr.jpg"
+  fig.tight_layout()
+  fig.savefig(figfile)
+#+end_src
+
+#+RESULTS:
+[[file:jairo-sfr.jpg]]
+
+*** A dying galaxy triggers the birth of new stars
+:PROPERTIES:
+:EXPORT_FILE_NAME: jairo-text
+:END:
+
+What caused our Sun to be born?  A recent paper by researchers from the IRyA suggests that the answer may lie in a small satellite galaxy that is slowly being devoured by our larger Milky Way Galaxy.
+The smaller galaxy (known as the Sagittarius Dwarf Spheroidal Galaxy, or Sgr dSph) is on an elongated orbit around the Milky Way, making a close approach every billion years or so.
 Every time it does so, it shakes up the gas clouds in the Milky Way's disk, which encourages the birth of new stars.
 One such burst of star formation, which occurred about 5 billion years ago is likely to have included the birth of our Sun.
 
+#+CAPTION: History of star birth in the solar neighborhood found by Alzate et al. 2021
+#+ATTR_HTML: :alt star-formation rate vs time  :align right
+[[./jairo-sfr.jpg]]
+
 Researchers led by the doctoral student Jairo Alzate obtained the brightness and colors of more than 100,000 nearby stars in the solar neighborhood from observations with the Gaia satellite, which was launched by the European Space Agency in 2013.
 In a paper published last year (Alzate et al. 2021) in the Monthly Notices of the Royal Astronomical Society, they used these measurements to reconstruct the historical record of star births in the small region of the Milky Way within about 300 light years of the Sun.
-By looking at groups of stars with different chemical compositions, they were able to identify 3 different epochs of star formation, as shown in the Figure.
+By looking at groups of stars with different chemical compositions (see box), they were able to identify 3 different epochs of star formation, as shown in the Figure.
 
+#+begin_quote
+*BOX*
 The fraction of heavy elements such as carbon, oxygen, and iron in the chemical make-up of a star is known as its metallicity.
 The earliest generations of stars are relatively poor in metals, since only light elements such as hydrogen and helium were created in the Big Bang at the beginning of the Universe (about 15 billion years ago).
 Each generation of stars converts some hydrogen into heavier elements and a fraction of these are expelled from the stars to mix with the Galactic gas clouds from which the next generation will be born.
-This is why the metallicity of new born stars tends to increase with time over the lifetime of a galaxy such as ours. 
+This is why the metallicity of new born stars tends to increase with time over the lifetime of a galaxy such as ours.
+#+end_quote
 
 Alzate and colleagues found that the metal-poor stars show a peak in their birth rate about 10 billion years ago, which declines to much lower levels by 8 billion years ago.
 For stars with a similar composition to the sun, on the other hand,
@@ -156,3 +281,14 @@ This result is consistent with other independent studies that have used differen
 For instance researchers from Spain, France, and Italy led by Tomás Ruiz-Lara from Tenerife also found evidence for a burst around 6 billion years ago, together with more recent bursts at 2 and 1 billion years ago (Ruiz-Lara et al. 2020).
 On the other hand, another recent study by researchers from Italy, Chile, and China led by Piero Dal Tio from Padua detected a low-metallicity burst 9.5 billion years ago but found no evidence for any more recent bursts.
 Clearly, further study is needed to resolve these differences.
+
+The Sagittarius Dwarf Spheroidal Galaxy is currently less massive than the Milky Way by a factor of more than 1000, but astronomers believe it was much more massive in the past.
+Tidal forces due to its interaction with the Milky Way are gradually stripping its stars away and it is likely to have dissipated completely within the next billion years.
+In the meantime, its close passages through the Milky Way are causing several different ripple effects.
+In addition to the bursts of star formation identified by Alzate and colleagues,
+peculiar patterns of correlation between star speeds and positions
+(known as phase-space spirals and ridges) have recently been detected in the solar neighborhood,
+and these too have been attributed to the Sagittarius Dwarf (Antoja et al. 2018).
+It has even been suggested that the spiral arms of the Milky Way might owe their formation
+to long-ago interactions with the Sagittarius Dwarf at a time when that galaxy was more massive (Purcell et al. 2011).
+
