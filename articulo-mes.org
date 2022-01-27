@@ -207,9 +207,9 @@ Note that I have added in the 13 Gyr point from the grid B table
   ax.fill_between(tgrid, zs0_grid, zs1_grid, color=colors[1], alpha=0.3)
   ax.annotate(
       "Sun-type\nstars",
-      (tgrid[90], zs_grid[90]),
+      (tgrid[87], zs_grid[87]),
       color=colors[1],
-      xytext=(0, 30),
+      xytext=(0, -120),
       textcoords="offset points",
       ha="center",
   )
@@ -240,10 +240,120 @@ Note that I have added in the 13 Gyr point from the grid B table
   figfile = "jairo-sfr.jpg"
   fig.tight_layout()
   fig.savefig(figfile)
+  fig.savefig(figfile.replace(".jpg", ".pdf"))
 #+end_src
 
 #+RESULTS:
 [[file:jairo-sfr.jpg]]
+**** Spanish version of figure
+#+begin_src python :var tab=jairo-grid-c :return figfile :results file
+  import numpy as np
+  from scipy.interpolate import interp1d
+  from matplotlib import pyplot as plt
+  import seaborn as sns
+  import cmasher as cmr
+
+  sns.set_context("talk")
+
+  # get data from even rows in table
+  age, a1, da1, a2, da2, a3, da3, a4, da4, tot = np.array(tab[::2]).T
+  # downwards error bar is in odd rows
+  _, _, dda1, _, dda2, _, dda3, _, dda4, _ = np.array(tab[1::2]).astype("float").T
+
+  # estimate widths of age bins 
+  dt = np.diff(age, append=16.0)
+  zpoor = (a1 + a2) / dt
+  zsolar = a3 / dt
+  zrich = a4 / dt
+  zp1 = (a1 + da1 + a2 + da2) / dt
+  zp0 = (a1 + dda1 + a2 + dda2) / dt
+  zs1 = (a3 + da3) / dt
+  zs0 = (a3 + dda3) / dt
+  zr1 = (a4 + da4) / dt
+  zr0 = (a4 + dda4) / dt
+
+  tgrid = np.linspace(0.0, 13.0, 201)
+
+  def myinterp(x, xp, yp):
+      """Interpolation ensuring positivity"""
+      interpolator = interp1d(xp, yp, fill_value=0.0, bounds_error=False, kind="quadratic")
+      return np.abs(interpolator(x))
+
+
+  zp_grid = myinterp(tgrid, age, zpoor)
+  zs_grid = myinterp(tgrid, age, zsolar)
+  zr_grid = myinterp(tgrid, age, zrich)
+
+  zp1_grid = myinterp(tgrid, age, zp1)
+  zp0_grid = myinterp(tgrid, age, zp0)
+  zs1_grid = myinterp(tgrid, age, zs1)
+  zs0_grid = myinterp(tgrid, age, zs0)
+  zr1_grid = myinterp(tgrid, age, zr1)
+  zr0_grid = myinterp(tgrid, age, zr0)
+
+  fig, ax = plt.subplots(figsize=(8, 4))
+
+  # histogram of original values
+  # ax.plot(age, zpoor, ds="steps-mid")
+  # ax.plot(age, zsolar, ds="steps-mid")
+  # ax.plot(age, zrich, ds="steps-mid")
+
+  colors = cmr.take_cmap_colors('cmr.chroma', 3, cmap_range=(0.1, 0.5), return_fmt='hex')
+
+  # spline interpolation
+  ax.plot(tgrid, zp_grid, color=colors[0])
+  ax.fill_between(tgrid, zp0_grid, zp1_grid, color=colors[0], alpha=0.3)
+  ax.annotate(
+      "Estrellas pobres\nen metales",
+      (tgrid[160], zp_grid[160]),
+      color=colors[0],
+      xytext=(0, 20),
+      textcoords="offset points",
+      ha="center",
+  )
+
+  ax.plot(tgrid, zs_grid, color=colors[1])
+  ax.fill_between(tgrid, zs0_grid, zs1_grid, color=colors[1], alpha=0.3)
+  ax.annotate(
+      "Estrellas\ntipo Sol",
+      (tgrid[87], zs_grid[87]),
+      color=colors[1],
+      xytext=(0, -120),
+      textcoords="offset points",
+      ha="center",
+  )
+
+  ax.plot(tgrid, zr_grid, color=colors[2])
+  ax.fill_between(tgrid, zr0_grid, zr1_grid, color=colors[2], alpha=0.3)
+  ax.annotate(
+      "Estrellas ricos\nen metales",
+      (tgrid[30], zr_grid[30]),
+      color=colors[2],
+      xytext=(0, 60),
+      textcoords="offset points",
+      ha="center",
+  )
+
+  ax.set_xticks([0.0, 5.0, 10.0])
+  ax.set_xticklabels(["ahora", "hace\n5 billones\nde años", "hace\n10 billones\nde años"])
+  ax.set_yticks([])
+  ax.invert_xaxis()
+  #ax.set_xlabel("Age")
+  ax.set_ylabel(
+      "Tasa de\nformación\nestelar relativa",
+      rotation="horizontal",
+      loc="top",
+      va="top",
+  )
+  sns.despine()
+  figfile = "jairo-sfr-es.jpg"
+  fig.tight_layout()
+  fig.savefig(figfile)
+  fig.savefig(figfile.replace(".jpg", ".pdf"))
+#+end_src
+
+#+RESULTS:
+[[file:jairo-sfr-es.jpg]]
 
 *** A dying galaxy triggers the birth of new stars
 :PROPERTIES:
