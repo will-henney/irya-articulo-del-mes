@@ -59,17 +59,20 @@ Alzate, Jairo A.; Bruzual, Gustavo; Díaz-González, Daniel J.
 Gómez-González, V. M. A.; Mayya, Y. D.; Toalá, J. A.; Arthur, S. J.; Zaragoza-Cardiel, J.; Guerrero, M. A. 
 2021/01, Monthly Notices of the Royal Astronomical Society, 500, 2076
 * Month by month
-** TODO Pilot study [2022-01-23 Sun]
+** TODO #02 - ??? [2022-02-19 Sat]
+
+** DONE #01 - Jairo Pilot study [2022-01-23 Sun]
+CLOSED: [2022-02-19 Sat 09:43]
 + Alzate et al. 2021/01
 + [[https://ui.adsabs.harvard.edu/abs/2021MNRAS.501..302A][Star formation history of the solar neighbourhood as told by Gaia]]
-** Export self-contained html file
+*** Export self-contained html file
 
-** Summary of results
+*** Summary of results
 They identify 3 episodes of star formation in the solar neighborhood:
 1. Intense period 10 Gyr ago, with subsolar metallicity (Z = 0.014), followed by decline to minimum 8 Gyr ago
 2. Local maximum 5 Gyr ago at solar metallicity (Z = 0.017)
 3. Low-level continuing until recently at higher metallicity (Z = 0.03)
-*** Relevant quote
+**** Relevant quote
 From section 4.1
 : The AMD in Fig. 6c shows clearly the presence of three well de fined
 : events. A maximum in the star formation activity took place ~ 10 Gyr
@@ -86,7 +89,7 @@ From section 4.1
 : all the stars brighter than G = 12 in Gaia DR2, our results are in
 : agreement with the star for mation history derived by Mor et
 : al. (2019) for the larger sample a using a single metallicity model.
-** Figs
+*** Figs
 + Best figure in the paper is probably 6d
 + But it could be improved on using the data from Table 4
 + The 3D plot would be better as 2D with 3 different lines for different metallicities
@@ -94,21 +97,21 @@ From section 4.1
   + Maybe do a KDE for smoothing
   + Show the uncertainty with a translucent band
   + Add another line for the total
-** Methodology
+*** Methodology
 + They used Gaia sample of stars brighter than G = 15, and within 100 pc
 + They fit ensembles of theoretical isochrones to the color-magnitude diagram in order to infer the star formation history
 + Results are fraction of stars that have each age and metallicity
   + 11 discrete ages and 4 metallicities in their high-res model
 + They don't explicitly find a SFR, although we could use the normalization from other papers
-** Context
+*** Context
 + Possibly the SF peaks are due to perturbations by the Sagittarius dwarf galaxy
   + This is consistent with simulations by Vasiliev et al 2021, which give a longer time scale than previous studies
   + Also has excited a "phase spiral" in the solar neighborhood
     + Antoja et al. 2018
     + Bland-Hawthorn & García 2021
   + The mass of Sag dwarf is currently low, but it has been losing mass on every passage, and supposedly it used to be more massive.
-** New figure
-*** Grid C
+*** New figure
+**** Grid C
 #+name: jairo-grid-c
 | Age(Gyr) | Z=0.010 |         | Z=0.014 |         | Z=0.017 |         | Z=0.030 |         |   Total |
 |----------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
