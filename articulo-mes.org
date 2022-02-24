@@ -3,8 +3,26 @@
 1. Published during the past 12 months or so
 2. First author is student or postdoc affiliated with the IRyA
 * Candidate articles
+** 2022 March
+*** Natalia Osorio (Omaira)                       :phd:
+Observational hints on the torus obscuring gas behaviour through X-rays with NuSTAR data 
+Osorio-Clavijo, N.; González-Martín, O.; Sánchez, S. F.; Esparza-Arredondo, D.; Masegosa, J.; Victoria-Ceballos, C.; Hernández-García, L.; Díaz, Y. 
+2022/03, Monthly Notices of the Royal Astronomical Society, 510, 5102
+**** Assessment
++ No citations yet
++ Lots of fitting of x-ray spectra
++ Conclusions do not seem very clear
++ 
+*** Guido Granda (Enrique)                        :phd:
+A resolution criterion based on characteristic time-scales for MHD simulations of molecular clouds 
+Granda-Muñoz, Guido; Vázquez-Semadeni, Enrique; Gómez, Gilberto C.; Zamora-Avilés, Manuel 
+2022/03, Monthly Notices of the Royal Astronomical Society, 510, 5062
+**** Assessment
+
+** 2022 February
 ** 2022 January
-*** Mengyao Tang                                  :phd:gone:
+*** Gris Arroyo-Chávez (Enrique)                  :phd:
+*** [#B] Mengyao Tang                             :phd:gone:
 W51 North: A protocluster emerging out of a thermally inhibited fragmenting cloud 
 Tang, Mengyao; Palau, Aina; Zapata, Luis A.; Qin, Sheng-Li 
 2022/01, Astronomy and Astrophysics, 657, A30
@@ -13,7 +31,7 @@ Planetary nebulae with Wolf-Rayet-type central stars - III. A detailed view of N
 Gómez-González, V. M. A.; Rubio, G.; Toalá, J. A.; Guerrero, M. A.; Sabin, L.; Todt, H.; Gómez-Llanos, V.; Ramos-Larios, G.; Mayya, Y. D. 
 2022/01, Monthly Notices of the Royal Astronomical Society, 509, 974
 ** 2021 December
-*** Jacqueline                                    :postdoc:
+*** [#B] Jacqueline                               :postdoc:
 Planetary nebulae with Wolf-Rayet-type central stars - II. Dissecting the compact planetary nebula M 2-31 with GTC MEGARA 
 Rechy-García, J. S.; Toalá, J. A.; Cazzoli, S.; Guerrero, M. A.; Sabin, L.; Gómez-González, V. M. A.; Ramos-Larios, G. 
 2021/12, Monthly Notices of the Royal Astronomical Society, 508, 2254
@@ -49,7 +67,8 @@ Rodríguez-González, J. B.; Sabin, L.; Toalá, J. A.; Zavala, S.; Ramos-Larios,
 Nony, T.; Robitaille, J. -F.; Motte, F.; Gonzalez, M.; Joncour, I.; Moraux, E.; Men'shchikov, A.; Didelon, P.; Louvet, F.; Buckner, A. S. M.; Schneider, N.; Lumsden, S. L.; Bontemps, S.; Pouteau, Y.; Cunningham, N.; Fiorellino, E.; Oudmaijer, R.; André, P.; Thomasson, B. 
 2021/01, Astronomy and Astrophysics, 645, A94
 *8 citations*
-*** [#A] Jairo again                              :phd:
+*** DONE [#A] Jairo again                         :phd:
+CLOSED: [2022-02-19 Sat 09:50]
 [[https://ui.adsabs.harvard.edu/abs/2021MNRAS.501..302A][Star formation history of the solar neighbourhood as told by Gaia]] 
 Alzate, Jairo A.; Bruzual, Gustavo; Díaz-González, Daniel J. 
 2021/01, Monthly Notices of the Royal Astronomical Society, 501, 302
@@ -338,7 +357,7 @@ Note that I have added in the 13 Gyr point from the grid B table
   )
 
   ax.set_xticks([0.0, 5.0, 10.0])
-  ax.set_xticklabels(["ahora", "hace\n5 billones\nde años", "hace\n10 billones\nde años"])
+  ax.set_xticklabels(["ahora", "hace\n5 mil millones\nde años", "hace\n10 mil millones\nde años"])
   ax.set_yticks([])
   ax.invert_xaxis()
   #ax.set_xlabel("Age")
