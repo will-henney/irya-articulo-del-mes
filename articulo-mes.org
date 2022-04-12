@@ -21,7 +21,13 @@ Granda-Muñoz, Guido; Vázquez-Semadeni, Enrique; Gómez, Gilberto C.; Zamora-Av
 
 ** 2022 February
 ** 2022 January
-*** Gris Arroyo-Chávez (Enrique)                  :phd:
+*** [#A] Gris Arroyo-Chávez (Enrique)             :phd:
+Evolution of the Angular Momentum during Gravitational Fragmentation of Molecular Clouds
+Arroyo-Chávez, Griselda;  Vázquez-Semadeni, Enrique
+2022/01, The Astrophysical Journal, Volume 925, Issue 1, id.78, 18 pp.
+**** Assessment
+This is the one I want to do for March
+
 *** [#B] Mengyao Tang                             :phd:gone:
 W51 North: A protocluster emerging out of a thermally inhibited fragmenting cloud 
 Tang, Mengyao; Palau, Aina; Zapata, Luis A.; Qin, Sheng-Li 
@@ -78,7 +84,168 @@ Alzate, Jairo A.; Bruzual, Gustavo; Díaz-González, Daniel J.
 Gómez-González, V. M. A.; Mayya, Y. D.; Toalá, J. A.; Arthur, S. J.; Zaragoza-Cardiel, J.; Guerrero, M. A. 
 2021/01, Monthly Notices of the Royal Astronomical Society, 500, 2076
 * Month by month
-** TODO #02 - ??? [2022-02-19 Sat]
+** TODO #02 - Gris & Enrique [2022-02-19 Sat]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-04-10 Sun 20:57]
+:END:
+*** DONE [2022-02-27 Sun] Initial hand-written notes
+CLOSED: [2022-04-11 Mon 13:32]
+- These are in Apple Notes
+- [[file:Gris paper notes (Spotlight article).pdf][PDF export]]
+*** DONE [2022-04-10 Sun] First draft of text
+CLOSED: [2022-04-11 Mon 13:32]
+- Done in Tot
+*** TODO [2022-04-11 Mon] Combine text and figure
+- Done in Craft, so I can export a nice version and everyone can comment on it
+- Figure done in python and Affinity Designer
+**** Gris figure
+- We want to plot rotation velocity (m/s) against separation (pc or ly)
+- Typical results from Figure 6 of paper
+
+  #+name: gris-fig6
+  | R, pc | j, cm2/s | V, m/s | R, ly | Cloud |
+  |-------+----------+--------+-------+-------|
+  |  0.18 |    6e+21 |  108.0 |  0.59 | C4    |
+  |  0.23 |    6e+21 |   84.5 |  0.75 | C4    |
+  |   0.3 |    6e+21 |   64.8 |  0.98 | C4    |
+  |  0.36 |    6e+21 |   54.0 |  1.17 | C4    |
+  |  0.44 |    7e+21 |   51.6 |  1.44 | C4    |
+  |   0.5 |    7e+21 |   45.4 |  1.63 | C4    |
+  |   0.7 |    7e+21 |   32.4 |  2.28 | C4    |
+  |   1.0 |    8e+21 |   25.9 |  3.26 | C4    |
+  |   1.4 |  1.4e+22 |   32.4 |  4.57 | C4    |
+  |   2.0 |    2e+22 |   32.4 |  6.52 | C4    |
+  |   2.5 |    3e+22 |   38.9 |  8.15 | C4    |
+  |-------+----------+--------+-------+-------|
+  |   0.3 |    7e+21 |   75.6 |  0.98 | C3    |
+  |   0.5 |    7e+21 |   45.4 |  1.63 | C3    |
+  |   0.7 |    7e+21 |   32.4 |  2.28 | C3    |
+  |   1.0 |    7e+21 |   22.7 |  3.26 | C3    |
+  |   1.5 |    7e+21 |   15.1 |  4.89 | C3    |
+  |   2.0 |  1.0e+22 |   16.2 |  6.52 | C3    |
+  |   3.0 |  3.0e+22 |   32.4 |  9.78 | C3    |
+  |-------+----------+--------+-------+-------|
+  |   0.9 |    3e+22 |  108.0 |  2.94 | C2    |
+  |   2.0 |  1.5e+22 |   24.3 |  6.52 | C2    |
+  |   4.0 |  1.5e+22 |   12.2 | 13.05 | C2    |
+  |-------+----------+--------+-------+-------|
+  |   4.0 |  5.0e+23 |  405.1 | 13.05 | C1    |
+  |   5.0 |  5.0e+23 |  324.1 | 16.31 | C1    |
+  |   6.0 |  5.0e+23 |  270.1 | 19.57 | C1    |
+  |   7.0 |  5.0e+23 |  231.5 | 22.83 | C1    |
+  |   8.0 |  5.0e+23 |  202.5 | 26.09 | C1    |
+  |-------+----------+--------+-------+-------|
+  |   0.8 |  2.5e+22 |  101.3 |  2.61 | C6    |
+  |   0.9 |  2.5e+22 |   90.0 |  2.94 | C6    |
+  |   1.0 |  2.5e+22 |   81.0 |  3.26 | C6    |
+  |   1.5 |  2.5e+22 |   54.0 |  4.89 | C6    |
+  |   2.0 |  2.6e+22 |   42.1 |  6.52 | C6    |
+  |   2.5 |  2.7e+22 |   35.0 |  8.15 | C6    |
+  |-------+----------+--------+-------+-------|
+  |   0.7 |  2.0e+22 |   92.6 |  2.28 | C7    |
+  |   1.0 |  2.0e+22 |   64.8 |  3.26 | C7    |
+  |   1.3 |    2e+22 |   49.9 |  4.24 | C7    |
+  |   1.6 |    2e+22 |   40.5 |  5.22 | C7    |
+  |   1.9 |    2e+22 |   34.1 |  6.20 | C7    |
+  |   2.2 |    2e+22 |   29.5 |  7.18 | C7    |
+  |   2.5 |  2.1e+22 |   27.2 |  8.15 | C7    |
+  |   2.8 |  2.2e+22 |   25.5 |  9.13 | C7    |
+  |   3.1 |    2e+22 |   20.9 | 10.11 | C7    |
+  #+TBLFM: $3=$2 / $1 $pc $m;f1::$4=$1 $pc / $lyr; f2
+
+#+name: gris-R-V
+#+header: :var TAB=gris-fig6 LANG="en"
+#+begin_src python :return figfile :results file
+  import numpy as np
+  from astropy.table import Table
+  from astropy import units as u
+  from matplotlib import pyplot as plt
+  import seaborn as sns
+
+  sns.set_context("talk")
+
+  def observed_V_R(radius: u.Quantity) -> u.Quantity:
+      """Observed relation between rotation velocity and size
+
+      Based on equation (10) of Arroyo-Chávez+ 2022
+      But translated from j to V
+      """
+      j = (10**22.7) * (radius / u.pc)**1.52 * u.cm**2 / u.s
+      V = (j / radius).to(u.m / u.s)
+      return V
+
+  def V_R_at_constant_j(
+          radius: u.Quantity,
+          r0: u.Quantity = 1.0 * u.lyr,
+  ) -> u.Quantity:
+      """Velocity versus radius trajectory at constant specific angular momentum
+
+      For contraction to arrive on the observational line at r=r0
+      """
+      V0 = observed_V_R(r0)
+      V = np.where(
+          radius < r0,
+          np.nan,
+          V0 * (r0 / radius)
+      )
+      return V
+
+  rgrid = np.linspace(0.0, 20.0, 500) * u.lyr
+  vgrid = observed_V_R(rgrid)
+
+  figfile = f"gris-R-V-{LANG}.pdf"
+  tab = Table(rows=TAB[1:], names=TAB[0]).group_by("Cloud")
+  skip = [] #["C1",  "C4"]
+  fig, ax = plt.subplots(figsize=(9, 5))
+  ax.plot(rgrid, vgrid, color="k", alpha=0.3, linewidth=10)
+  for r0 in [1.0, 5.0, 10.0, 15.0]:
+      r0 *= u.lyr
+      v_evo = V_R_at_constant_j(rgrid, r0)
+      v_evo[rgrid > r0 + 10 * u.lyr] = np.nan
+      line, = ax.plot(rgrid, v_evo, alpha=0.3, lw=10)
+      ax.scatter(r0, observed_V_R(r0), marker="o", color=line.get_color())
+
+  # for key, grp in zip(tab.groups.keys, tab.groups):
+  #     label = key["Cloud"]
+  #     if label in skip:
+  #         continue
+  #     ax.plot("R, ly", "V, m/s", data=grp, label=label)
+  # ax.legend(ncol=3, fontsize="x-small")
+
+  if LANG == "es":
+      xlabel = "Tamaño de la nube, años luz"
+      ylabel = "Velocidad de giro\nde la nube, m/s"
+  else:
+      xlabel = "Cloud size, light year"
+      ylabel = "Cloud rotation\nspeed, m/s"
+    
+  sns.despine()
+  ax.set(
+      xscale="linear",
+      yscale="linear",
+      xlim=[0, 22],
+      ylim=[0, 490],
+      xlabel=xlabel,
+  )
+  ax.set_ylabel(
+      ylabel,
+      rotation="horizontal",
+      loc="top",
+      va="top",
+  )
+
+  fig.tight_layout()
+  fig.savefig(figfile)
+#+end_src
+
+#+RESULTS:
+[[file:gris-R-V-en.pdf]]
+
+
+#+call: gris-R-V(LANG="es")
+
+#+RESULTS:
+[[file:gris-R-V-es.pdf]]
 
 ** DONE #01 - Jairo Pilot study [2022-01-23 Sun]
 CLOSED: [2022-02-19 Sat 09:43]
